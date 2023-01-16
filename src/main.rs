@@ -5,7 +5,7 @@ use keygen::keygen;
 #[derive(Parser, Debug)]
 #[command(version, about, long_about = None)]
 pub struct Args {
-    /// Length of key to generate (must be 64, 128, or 256)
+    /// Length of key to generate
     #[arg(short, long, default_value_t = 8)]
     length: usize,
 

@@ -87,7 +87,7 @@ pub mod keygen {
     /// Get all ASCII characters from a given regex.
     fn get_chars_from_ascii(regex: &str) -> String {
         let mut characters: String = String::from("");
-        for i in 48..128 {
+        for i in 45..128 {
             if let Some(c) = char::from_u32(i) {
                 if Regex::new(regex).unwrap().is_match(&c.to_string()) {
                     characters.push(c);
